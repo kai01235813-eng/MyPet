@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Pet - AI 펫 키우기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐕 Gemini Pet - AI 시바견 키우기</h1>
+            <p>Gemini와 대화하며 펫을 키워보세요!</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Pet Display Area -->
+            <div class="pet-area">
+                <div class="pet-stats">
+                    <div class="stat">
+                        <span class="stat-label">레벨</span>
+                        <span class="stat-value" id="level">1</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">경험치</span>
+                        <span class="stat-value" id="exp">0/100</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">기분</span>
+                        <span class="stat-value" id="mood">😊</span>
+                    </div>
+                </div>
+                
+                <div class="pet-display" id="petDisplay">
+                    <div class="shiba" id="shiba">🐕</div>
+                    <div class="pet-message" id="petMessage">안녕하세요! 저는 Gemini 시바견이에요!</div>
+                </div>
+
+                <div class="exp-bar-container">
+                    <div class="exp-bar" id="expBar"></div>
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-area">
+                <div class="api-key-section" id="apiKeySection">
+                    <input 
+                        type="password" 
+                        id="apiKeyInput" 
+                        placeholder="Gemini API 키를 입력하세요"
+                        autocomplete="off"
+                    >
+                    <button id="saveApiKeyBtn">API 키 저장</button>
+                    <p class="api-hint">API 키는 <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>에서 발급받을 수 있습니다.</p>
+                </div>
+
+                <div class="chat-container" id="chatContainer" style="display: none;">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="system-message">
+                            시바견과 대화를 시작하세요! 창작 활동, 뉴스 검색, 지식 질문 등을 하면 펫이 성장합니다.
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <textarea 
+                            id="userInput" 
+                            placeholder="메시지를 입력하세요... (예: 오늘 뉴스 알려줘, 노래 가사 만들어줘, 양자역학 설명해줘)"
+                            rows="3"
+                        ></textarea>
+                        <button id="sendBtn">전송</button>
+                    </div>
+
+                    <div class="activity-suggestions">
+                        <p>💡 추천 활동:</p>
+                        <button class="suggestion-btn" data-query="오늘의 주요 뉴스를 간단히 알려줘">📰 뉴스</button>
+                        <button class="suggestion-btn" data-query="희망을 주제로 짧은 노래 가사를 만들어줘">🎵 노래 만들기</button>
+                        <button class="suggestion-btn" data-query="인공지능의 미래에 대해 설명해줘">📚 지식 검색</button>
+                        <button class="suggestion-btn" data-query="창의적인 이야기를 하나 만들어줘">✨ 창작 활동</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ using Gemini API</p>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
