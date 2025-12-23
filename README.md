@@ -53,10 +53,13 @@ GitHub Codespaces는 클라우드 기반 개발 환경이라 별도 설치 없�
    npx http-server -p 8000
    ```
    **참고**: 두 방법 모두 동일하게 작동하며, 코드스페이스에 이미 설치되어 있습니다.
-5. 포트 포워딩 알림이 나타나면 "Open in Browser" 클릭
-6. 또는 "PORTS" 탭에서 포트 8000을 찾아 브라우저 아이콘 클릭
-7. **중요**: 브라우저가 열리면 주소 끝에 `/index.html`을 추가하세요
-   - 예: `http://localhost:8000/` → `http://localhost:8000/index.html`
+5. **중요 - 포트 포워딩 사용**:
+   - 서버 실행 후 화면 우측 하단에 포트 포워딩 알림이 나타나면 **"Open in Browser"** 클릭
+   - 또는 화면 하단의 **"PORTS"** 탭을 클릭 → 포트 8000 찾기 → 지구본 아이콘(🌐) 클릭
+   - ⚠️ **코드스페이스에서는 `http://localhost:8000` 직접 접속이 안 됩니다!**
+   - 반드시 포트 포워딩된 URL을 사용해야 합니다 (예: `https://xxx-8000.app.github.dev`)
+6. 브라우저가 열리면 주소 끝에 `/index.html`을 추가하세요
+   - 포워딩된 URL 예: `https://xxx-8000.app.github.dev/index.html`
    - 또는 디렉토리 리스팅에서 `index.html` 파일을 직접 클릭
 
 **터미널이 안 보이는 경우:**
