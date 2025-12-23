@@ -30,7 +30,9 @@ python3 -m http.server 8000
 npx http-server -p 8000
 ```
 
-브라우저에서 `http://localhost:8000`으로 접속하세요.
+브라우저에서 `http://localhost:8000/index.html`으로 접속하세요.
+
+**주의**: 단순히 `http://localhost:8000`으로 접속하면 디렉토리 리스팅이 표시됩니다. 반드시 `/index.html`을 포함한 전체 URL로 접속하거나, 디렉토리 리스팅에서 `index.html`을 클릭하세요.
 
 ### 3. 코드스페이스에서 테스트하기
 
@@ -48,6 +50,9 @@ GitHub Codespaces는 클라우드 기반 개발 환경이라 별도 설치 없�
    ```
 5. 포트 포워딩 알림이 나타나면 "Open in Browser" 클릭
 6. 또는 "PORTS" 탭에서 포트 8000을 찾아 브라우저 아이콘 클릭
+7. **중요**: 브라우저가 열리면 주소 끝에 `/index.html`을 추가하세요
+   - 예: `http://localhost:8000/` → `http://localhost:8000/index.html`
+   - 또는 디렉토리 리스팅에서 `index.html` 파일을 직접 클릭
 
 **터미널이 안 보이는 경우:**
 - 화면 하단의 패널이 숨겨져 있을 수 있습니다
